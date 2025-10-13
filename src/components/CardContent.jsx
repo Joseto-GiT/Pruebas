@@ -1,25 +1,45 @@
-import React from "react";
-import imagenTienda from "../assets/img/imagen-tienda.png";
-import "../assets/css/CardContent.css";
+import React from 'react';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
-const CardContent = () => {
+export default function CardContent({ 
+  image, 
+  title, 
+  description, 
+  buttonText, 
+  buttonLink 
+}) {
   return (
-    <div className="col s12 m4 card-right">
-      <div className="card">
-        <div className="card-image">
-          <img src={imagenTienda} alt="Imagen de una tienda" />
-        </div>
-        <div className="card-content">
-          <p>
-            Comienza a vender con nosotros utilizando nuestra plataforma.
-          </p>
-        </div>
-        <div className="card-action">
-          <a href="https://github.com/AbelolDev">Link a mi Github</a>
-        </div>
-      </div>
-    </div>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image={image}
+        alt={title}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {description}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button 
+          size="small" 
+          color="primary"
+          href={buttonLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {buttonText}
+        </Button>
+      </CardActions>
+    </Card>
   );
 };
-
-export default CardContent;
