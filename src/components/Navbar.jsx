@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../assets/css/LogoNavbar.css"
 import Logo from "../assets/img/logo.png"
-import Carrito from '../pages/Carrito';
-import Index from '../pages';
 
 const Navbar = () => {
   useEffect(() => {
@@ -22,15 +20,17 @@ const Navbar = () => {
           <ul className="right hide-on-med-and-down">
             <li><Link to="/">Inicio</Link></li>
             <li><Link to="/carrito">Mi carrito</Link></li>
+            <li><Link to="/productos">Productos</Link></li>
+            <li><Link to="/iniciar_sesion">Iniciar sesión</Link></li>
           </ul>
         </div>
       </nav>
 
       <ul className="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><Link to="/">Inicio</Link></li>
+        <li><Link to="/carrito">Mi carrito</Link></li>
+        <li><Link to="/productos">Productos</Link></li>
+        <li><Link to="/iniciar_sesion">Iniciar sesión</Link></li>
       </ul>
     </>
   );

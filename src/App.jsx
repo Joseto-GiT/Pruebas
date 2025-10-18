@@ -11,6 +11,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import Iniciar from './pages/public/iniciar.jsx';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/carrito' element={<Carrito />} />
           <Route path='/productos' element={<Productos />} />
           <Route path='/admin' element={<AdminPanel />} />
+          <Route path='/iniciar_sesion' element={<Iniciar />} />
         </Routes>
       <Footer />
     </BrowserRouter>

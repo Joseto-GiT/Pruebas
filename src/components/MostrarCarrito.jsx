@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/style.css"
+import Navbar from "./Navbar";
 
 const MostrarCarrito = () => {
   return (
-    <div className="card">
+    <>
+      <Navbar />
+      <div className="card">
       <div className="card-content">
         <span className="card-title">Tus Productos</span>
         <div className="empty-cart center-align">
@@ -17,6 +20,7 @@ const MostrarCarrito = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

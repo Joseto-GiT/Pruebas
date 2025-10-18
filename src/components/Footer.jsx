@@ -3,7 +3,7 @@ import "../assets/css/Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="page-footer yellow">
+    <footer className="page-footer blue darken-3 my-5 yellow">
       <div className="container">
         <div className="row">
           <h5 className="white-text">
